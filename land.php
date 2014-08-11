@@ -30,13 +30,27 @@ get_header(); ?>
 							</a>
 							
 							<br />
-							<img src="<?php echo get_template_directory_uri(); ?>/img/icons/courier_off.png" />
-							<img src="<?php echo get_template_directory_uri(); ?>/img/icons/mudanza_off.png" />
-							<img src="<?php echo get_template_directory_uri(); ?>/img/icons/consolidado_off.png" />
+							<a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('courier','','wp-content/themes/world-transport-intl/img/icons/courier_on.png',1)">
+								<img src="<?php echo get_template_directory_uri(); ?>/img/icons/courier_off.png" name="courier" />
+							</a>
+							<a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('mudanza','','wp-content/themes/world-transport-intl/img/icons/mudanza_on.png',1)">
+								<img src="<?php echo get_template_directory_uri(); ?>/img/icons/mudanza_off.png" name="mudanza"/>
+							</a>
+							<a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('consolidado','','wp-content/themes/world-transport-intl/img/icons/consolidado_on.png',1)">
+								<img src="<?php echo get_template_directory_uri(); ?>/img/icons/consolidado_off.png" name="consolidado" />
+							</a>
+							
 							<br/>
-							<img src="<?php echo get_template_directory_uri(); ?>/img/icons/wine_off.png" />
-							<img src="<?php echo get_template_directory_uri(); ?>/img/icons/club_off.png" />
-							<img src="<?php echo get_template_directory_uri(); ?>/img/icons/outsourcing_off.png" />
+							<a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('wine','','wp-content/themes/world-transport-intl/img/icons/wine_on.png',1)">
+								<img src="<?php echo get_template_directory_uri(); ?>/img/icons/wine_off.png" name="wine" />
+							</a>
+							<a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('club','','wp-content/themes/world-transport-intl/img/icons/club_on.png',1)">
+								<img src="<?php echo get_template_directory_uri(); ?>/img/icons/club_off.png" name="club" />
+							</a>
+							<a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('outsourcing','','wp-content/themes/world-transport-intl/img/icons/outsourcing_on.png',1)">
+								<img src="<?php echo get_template_directory_uri(); ?>/img/icons/outsourcing_off.png" name="outsourcing" />
+							</a>
+							
 						</div>
 					</div>
 					

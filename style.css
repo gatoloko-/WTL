@@ -59,7 +59,17 @@ and Blueprint http://www.blueprintcss.org/
     font-style: normal;
 
 }
+@font-face {
+    font-family: 'wire_oneregular';
+    src: url('font/wire/wireone-webfont.eot');
+    src: url('font/wire/wireone-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/wire/wireone-webfont.woff') format('woff'),
+         url('font/wire/wireone-webfont.ttf') format('truetype'),
+         url('font/wire/wireone-webfont.svg#wire_oneregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -835,12 +845,13 @@ object {
 }
 .text-land{
 	width: 48%;
-	float: right;
-	font-family: 'Open Sans Condensed', sans-serif;
+	float: left;
+	font-family: 'wire_oneregular';
+	font-weight: normal;
 	color: #FFFFFF;
-	font-size: 25px;
+	font-size: 30px;
 	margin: 15px;
-	text-align: right;
+	text-align: left;
 }
 .background-slide{
 	position:fixed;
@@ -853,7 +864,7 @@ object {
 	width: 48%;
 	float: left;
 	text-align:left;
-	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: 300;
 	color: #FFFFFF;	
 	text-align: right;
 }
