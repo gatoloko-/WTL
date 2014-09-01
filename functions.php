@@ -116,6 +116,35 @@ function rollOver() {
 
 add_action( 'wp_enqueue_scripts', 'rollOver' );
 
+function backgroundRender($bck) {if($bck[0]=="random"){
+echo "<style>
+body{
+	background: url(".get_template_directory_uri()."/img/".rand(1,10).".jpg) no-repeat center center fixed; 
+ 	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+</style>";
+}else{
+echo "<style>
+body{
+	background: url(".get_template_directory_uri()."/img/".$bck[0].".jpg) no-repeat center center fixed; 
+ 	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+</style>";
+}
+		
+	
+}
+
+add_filter( 'backgroundRender', 'background' );
+
+add_theme_support( 'post-thumbnails' );
+
 //mine
 /**
  * Implement the Custom Header feature.

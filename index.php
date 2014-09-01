@@ -15,32 +15,45 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
+		<div class="main-loop">
 		<?php if ( have_posts() ) : ?>
 
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-				?>
+				
+					<div class="news-div">
+						<a href="<?php the_permalink(); ?>"><?php the_title('<h2>', '</h2>') ?></a>
+						<?php the_post_thumbnail( 'thumbnail', array( 'class' => 'thumb-feed' ) ); ?>
+						<div class="feed-excerpt">
+							<?php the_excerpt(); ?>
+						</div>
+					</div>
+				
+				
+				
 
 			<?php endwhile; ?>
-
-			<?php world_transport_intl_paging_nav(); ?>
+			<div class="paging-navigation">
+				<?php world_transport_intl_paging_nav(); ?>
+			</div>
+			
 
 		<?php else : ?>
 
 			<?php get_template_part( 'content', 'none' ); ?>
 
 		<?php endif; ?>
-
+		</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+<style>
+body{
+	background: url(<?php echo get_template_directory_uri(); ?>/img/<?php echo rand(1, 6);  ?>.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+</style>
 <?php get_footer(); ?>

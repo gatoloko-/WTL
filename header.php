@@ -17,35 +17,36 @@
 <link href='http://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
 <?php wp_head(); ?>
 </head>
-
-<body <?php body_class(); ?> <?php if(is_home()){ echo "MM_preloadImages('wp-content/themes/world-transport-intl/img/icons/plane_on.png'".
-														",'wp-content/themes/world-transport-intl/img/icons/ship_on.png'".
-														",'wp-content/themes/world-transport-intl/img/icons/truck_on.png'".
+<?php $bck = get_post_custom_values('background-image'); ?>
+<body <?php body_class(); ?> <?php if(is_home()){ echo "onLoad=\"MM_preloadImages('".get_template_directory_uri()."/img/icons/plane_on.png'".
+														",'".get_template_directory_uri()."/img/icons/ship_on.png'".
+														",'".get_template_directory_uri()."/img/icons/truck_on.png'".
 														
-														",'wp-content/themes/world-transport-intl/img/icons/courier_on.png'".
-														",'wp-content/themes/world-transport-intl/img/icons/mudanza_on.png'".
-														",'wp-content/themes/world-transport-intl/img/icons/consolidado_on.png'".
+														",'".get_template_directory_uri()."/img/icons/courier_on.png'".
+														",'".get_template_directory_uri()."/img/icons/mudanza_on.png'".
+														",'".get_template_directory_uri()."/img/icons/consolidado_on.png'".
 														
-														",'wp-content/themes/world-transport-intl/img/icons/wine_on.png'".
-														",'wp-content/themes/world-transport-intl/img/club_on.png'".
-														",'wp-content/themes/world-transport-intl/img/outsourcing_on.png'".
-														")";
+														",'".get_template_directory_uri()."/img/icons/wine_on.png'".
+														",'".get_template_directory_uri()."/img/icons/club_on.png'".
+														",'".get_template_directory_uri()."/img/icons/outsourcing_on.png'".
+														")\"";
 								} ?> >
 	
-<div class="background-slide">
-<?php echo do_shortcode("[metaslider id=15]"); ?>	
-</div>
+
 
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'world-transport-intl' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
-			<img src="<?php echo get_template_directory_uri(); ?>/img/logo-small.png" class="logo"/>
+			<a href="/"><img src="<?php echo get_template_directory_uri(); ?>/img/logo-small.png" class="logo"/></a>
 		</div>
-
+		<div class="social">
+			<img class="social-icons" src="<?php echo get_template_directory_uri(); ?>/img/li.png">
+			<img class="social-icons" src="<?php echo get_template_directory_uri(); ?>/img/tw.png" />
+		</div>
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle"><?php _e( 'Primary Menu', 'world-transport-intl' ); ?></button>
+			<button class="menu-toggle"><?php _e( 'Menu', 'world-transport-intl' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->

@@ -1,10 +1,17 @@
 <?php
-/**
- * The template for displaying all single posts.
+/*
+Template Name: WTL Page template
+*
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site will use a
+ * different template.
  *
  * @package world transport intl
  */
 
+ 
+ 
 get_header(); ?>
 
 	<div id="primary" class="content-area">
@@ -26,12 +33,4 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php get_footer(); ?>
-<style>
-body{
-	background: url(<?php echo get_template_directory_uri(); ?>/img/<?php echo rand(1, 6)  ?>.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-</style>
+<?php backgroundRender($bck) ?> 
